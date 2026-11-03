@@ -22,6 +22,11 @@ first. The fix is queued.
 Known. One issue, one fix queued.
 </Callout>
 
+**Split.** #4471 holds two causes, each with its own ticket:
+[parser](https://github.com/theportugueezer/mega-s01e03-what-it-shows/issues/1) and
+[hint](https://github.com/theportugueezer/mega-s01e03-what-it-shows/issues/2).
+See [#4471 · two causes, one ticket](/kb/incidents/4471/problems).
+
 ## What was merged
 
 <CauseTable ticket={4471} />
