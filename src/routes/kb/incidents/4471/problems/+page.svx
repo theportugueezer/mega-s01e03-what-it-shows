@@ -1,6 +1,6 @@
 ---
 layout: runbook
-title: '#4471 · three problems, one ticket'
+title: '#4471 · two causes, one ticket'
 owner: support desk
 status: open
 reviewed: 2026-11-03
@@ -13,8 +13,8 @@ signature: Paulo Goncalves
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 </script>
 
-#4471 is marked known, with one fix queued. The reports in it describe three different problems,
-and each one needs its own fix. Fixing the parser leaves the other two open.
+#4471 is marked known, with one fix queued. The reports in it come from two causes, and each
+one needs its own fix. Fixing the parser leaves the booking-v3 form open.
 
 <ProblemTable ticket={4471} repo="theportugueezer/mega-s01e03-what-it-shows" />
 
@@ -25,20 +25,20 @@ and each one needs its own fix. Fixing the parser leaves the other two open.
 - **hint.** The booking-v3 form prints `MM/DD/YYYY` under its date field, so people type
   month first. The form then reads the date day first. The result looks the same as the parser
   bug, but only on the three booking-v3 tenants, and only through the form.
-- **one-day.** These reports describe a date that moves to the day before, for example Tuesday
-  12 May shown as Monday 11 May, or one meeting landing on different days in Lisbon and
-  Toronto. Nothing is swapped. The desk listed them as one-day moves in `desk-notes.json`
-  and filed them under parser.
+
+A few parser reports describe a date that moves to the day before, not a swap, for example
+Tuesday 12 May shown as Monday 11 May. The desk keeps them under parser, by tenant, and lists
+them in `desk-notes.json`. If more come in, they may need a ticket of their own.
 
 <Callout kind="warn">
-Merging on subject line put all three problems in one ticket, because people use the same
-words for each. Group by what a report shows: its tenant, its channel, and its dates.
+Merging on subject line put both causes in one ticket, because people use the same words for
+each. Group by what a report shows: its tenant, its channel, and its dates.
 </Callout>
 
 ## What to check before closing #4471
 
 1. The parser fix ships, and new parser reports stop, through every channel.
 2. The booking-v3 hint and the form agree on one order.
-3. Someone looks for the time-zone shift: none of these fixes touches it.
+3. The one-day moves stop too. If they do not, the parser fix did not cover them.
 
 <RenderStamp {signature} />
