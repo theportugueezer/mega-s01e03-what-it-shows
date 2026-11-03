@@ -4,7 +4,7 @@ title: '#4471 · three problems, one ticket'
 owner: support desk
 status: open
 reviewed: 2026-11-03
-signature: Paulo Goncalves
+signature: 'v1.eyJzdWIiOiIyNjUwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2ODE1MjksImV4cCI6MTc5Mzc2NzkyOX0.TCngQVkWVPJCJK58bpOEyybEbLEkxfb57pFCk5tI0AE'
 ---
 
 <script>
